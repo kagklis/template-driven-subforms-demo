@@ -1,0 +1,37 @@
+<div ngModelGroup="address" #address="ngModelGroup">
+  <p class="display-6">Address</p>
+
+  <div class="row">
+    <div class="col">
+      <app-required-field
+        name="streetAddress"
+        ngModel
+        placeholder="Street address"
+      ></app-required-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <app-required-field
+        name="city"
+        ngModel
+        placeholder="City"
+      ></app-required-field>
+    </div>
+    <div class="col-4">
+      <app-required-select
+        placeholder="Select state..."
+        [options]="stateOptions"
+        name="state"
+        ngModel
+      ></app-required-select>
+    </div>
+    <div class="col-4">
+      <app-required-field
+        name="zipCode"
+        ngModel
+        placeholder="Zip code (Example: 12345)"
+      ></app-required-field>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div ngModelGroup="personal" #personal="ngModelGroup">
+  <p class="display-6">Personal Information</p>
+  <div class="row">
+    <div class="col">
+      <app-required-field name="first" ngModel placeholder="First name">
+      </app-required-field>
+    </div>
+    <div class="col">
+      <app-required-field name="last" ngModel placeholder="Last name">
+      </app-required-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <app-required-select
+        placeholder="Select gender..."
+        [options]="genderOptions"
+        name="gender"
+        ngModel
+      ></app-required-select>
+    </div>
+  </div>
+  <ng-container *ngIf="personal?.value?.gender === 'Other'">
+    <div class="row">
+      <div class="col">
+        <app-required-field name="genderOther" ngModel placeholder="Specify">
+        </app-required-field>
+      </div>
+    </div>
+  </ng-container>
+</div>
