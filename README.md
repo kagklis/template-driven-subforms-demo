@@ -1,1 +1,1 @@
-A working example of Template-Driven sub-form components. 
+A working example of Template-Driven Sub-Forms demo. 
